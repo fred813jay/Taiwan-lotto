@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Taiwan  Lotto">
+  <meta name="author" content="Eason Peng">
+  <title>Taiwan  Lotto</title>
+  
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lalezar'>
+
+      <link rel="stylesheet" href="./style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="app1">
+  <div class="lottery_ticket">
+    <div class="top">
+      <div class="top_left">大</div>
+      <div class="top_right_top">6/49</div>
+      <div class="top_right_botoom">樂透</div>
+    </div>
+    <div class="money">您的金額: <span class="gold">${{money}}</span></div>
+    <div class="bottom">
+      <ul>
+        <li v-for="n in 5"> 
+          <div class="title">{{n}}
+            <div class="win" v-for="(w,index) in winning" v-show="index+1==n">{{w.name}}</div><br/>
+          </div><br/>
+          <div class="numtype">
+            <div class="num" v-for="(i,index) in 49" v-bind:id="'ticket_'+n+'_num_'+(index+1)" v-on:click="PickNumber(n,i)">{{i}}</div>
+            <div class="auto" v-on:click="PickRandom(n)">快選</div>
+            <div class="clear" v-on:click="clear(n)">清除</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="lottery">
+    <div class="getball" v-on:click="StartRandom()"> 
+      <div class="text">Lottery</div>
+    </div>
+    <div class="number" v-for="(n,index) in result" v-bind:class="{ myStyle: index === result.length -1}">{{n}}</div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>

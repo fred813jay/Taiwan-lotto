@@ -1,0 +1,194 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+  position: relative;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #fff7b2;
+  padding: 20px;
+}
+
+#app1 {
+  min-width: 1280px;
+}
+
+.lottery_ticket {
+  background-color: #fff;
+  width: 600px;
+  border: solid 1px;
+  padding: 10px;
+  user-select: none;
+}
+.lottery_ticket .money {
+  font-size: 24px;
+  padding: 10px;
+  padding-left: 32%;
+}
+.lottery_ticket .money .gold {
+  color: #2865d6;
+}
+.lottery_ticket .top {
+  height: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+.lottery_ticket .top .top_left {
+  font-size: 55px;
+  width: 70px;
+  height: 70px;
+  text-align: 75%;
+  background-color: #e7f24f;
+  display: inline-block;
+  border-radius: 50%;
+  color: #1750aa;
+  top: 20px;
+  font-family: "Lalezar", cursive;
+}
+.lottery_ticket .top .top_right_top {
+  font-size: 20px;
+  display: inline-block;
+  top: -10px;
+  color: #e50000;
+  font-family: "Lalezar", cursive;
+}
+.lottery_ticket .top .top_right_botoom {
+  font-size: 30px;
+  top: 25px;
+  left: -9%;
+  display: inline-block;
+  color: #1750aa;
+  font-family: "Lalezar", cursive;
+}
+.lottery_ticket .bottom ul {
+  margin: 20px;
+  padding: 0;
+}
+.lottery_ticket .bottom ul li {
+  list-style: none;
+  margin: 30px 5px;
+  padding: 20px;
+  font-size: 22px;
+  color: #e50000;
+  background-color: #fff7b2;
+}
+.lottery_ticket .bottom ul li .title {
+  font-size: 30px;
+  border: solid 1px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.lottery_ticket .bottom ul li .title .win {
+  top: 10px;
+  width: 500px;
+  color: blue;
+  text-align: center;
+}
+.lottery_ticket .bottom ul li .numtype {
+  cursor: pointer;
+}
+.lottery_ticket .bottom ul li .numtype .num {
+  border: solid 1px #e56b69;
+  margin: 5px;
+  width: 32px;
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+}
+.lottery_ticket .bottom ul li .numtype .num:hover {
+  background-color: #e50000;
+  color: white;
+}
+.lottery_ticket .bottom ul li .numtype .auto {
+  border: solid 1px #e56b69;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  width: 42px;
+  padding: 8px;
+  margin-left: 25%;
+  margin-top: 5px;
+  transform: translateX(25%);
+}
+.lottery_ticket .bottom ul li .numtype .auto:hover {
+  background-color: #e50000;
+  color: white;
+}
+.lottery_ticket .bottom ul li .numtype .clear {
+  border: solid 1px #e56b69;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  width: 42px;
+  padding: 8px;
+  margin-left: 25%;
+  margin-top: 5px;
+  transform: translateX(-25%);
+}
+.lottery_ticket .bottom ul li .numtype .clear:hover {
+  background-color: #e50000;
+  color: white;
+}
+
+.addhover:hover {
+  background-color: #e50000;
+  color: white;
+}
+
+.lottery {
+  position: absolute;
+  right: 200px;
+  top: 0px;
+  width: 400px;
+  height: 600px;
+}
+.lottery .getball {
+  width: 250px;
+  height: 80px;
+  border-radius: 40px;
+  border: solid 1px;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.lottery .getball:hover {
+  background-color: #e50000;
+  color: white;
+}
+.lottery .getball .text {
+  vertical-align: middle;
+  display: inline-block;
+}
+.lottery .number {
+  background-color: red;
+  font-size: 40px;
+  border: solid 5px black;
+  border-radius: 50%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+}
+
+.myStyle {
+  background-color: black;
+  font-size: 10px;
+}

@@ -1,0 +1,23 @@
+#app1
+  .lottery_ticket
+      .top
+        .top_left 大
+        .top_right_top 6/49
+        .top_right_botoom 樂透
+      .money 您的金額: 
+        span.gold ${{money}}
+      .bottom
+        ul
+          li(v-for="n in 5") 
+            .title {{n}}
+              .win(v-for="(w,index) in winning" v-show="index+1==n") {{w.name}}
+              br
+            br
+            .numtype()
+              .num(v-for="(i,index) in 49" v-bind:id="'ticket_'+n+'_num_'+(index+1)" v-on:click="PickNumber(n,i)") {{i}}
+              .auto( v-on:click="PickRandom(n)") 快選
+              .clear(v-on:click="clear(n)") 清除
+  .lottery
+    .getball(v-on:click="StartRandom()") 
+      .text Lottery
+    .number(v-for="(n,index) in result" v-bind:class="{ myStyle: index === result.length -1}") {{n}}
